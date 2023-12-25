@@ -26,8 +26,13 @@ void Game::run()
     bg.loadFromFile("images/bg-menu.png");
     sf::Sprite bgSprite;
     bgSprite.setTexture(bg);
+<<<<<<< Updated upstream
     bgSprite.setTextureRect(sf::IntRect(0, 0, _width, _height));
+=======
+    bgSprite.setTextureRect(sf::IntRect(0, 0, 960, 540));
+>>>>>>> Stashed changes
     bgSprite.setPosition(0, 0);
+    bgSprite.setScale(4. / 3, 4. / 3);
 
     // Настройки для создания анимированного фона
     const int frameNum = 29;
