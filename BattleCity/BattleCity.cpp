@@ -4,6 +4,18 @@ Game::Game()
 {
 	_height = 720;
 	_width = 1280;
+<<<<<<< Updated upstream
+=======
+    _buttons.clear();
+    _window.create(sf::VideoMode(_width, _height), "Battle city");
+
+    // Добавление иконки для окна
+    sf::Image icon;
+    icon.loadFromFile("images/icon.png");
+    _window.setIcon(32, 32, icon.getPixelsPtr());
+    _window.setVerticalSyncEnabled(true);
+    _window.setFramerateLimit(60);
+>>>>>>> Stashed changes
 }
 
 void Game::run()
