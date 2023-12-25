@@ -7,15 +7,15 @@ Game::Game()
 {
 	_height = 720;
 	_width = 1280;
-    _buttons.clear();
-    _window.create(sf::VideoMode(_width, _height), "Battle city");
+  _buttons.clear();
+  _window.create(sf::VideoMode(_width, _height), "Battle city");
 
-    // Добавление иконки для окна
-    sf::Image icon;
-    icon.loadFromFile("images/icon.png");
-    _window.setIcon(32, 32, icon.getPixelsPtr());
-    _window.setVerticalSyncEnabled(true);
-    _window.setFramerateLimit(60);
+  // Добавление иконки для окна
+  sf::Image icon;
+  icon.loadFromFile("images/icon.png");
+  _window.setIcon(32, 32, icon.getPixelsPtr());
+  _window.setVerticalSyncEnabled(true);
+  _window.setFramerateLimit(60);
 }
 
 void Game::run()
@@ -33,8 +33,9 @@ void Game::run()
     bg.loadFromFile("images/bg-menu.png");
     sf::Sprite bgSprite;
     bgSprite.setTexture(bg);
-    bgSprite.setTextureRect(sf::IntRect(0, 0, 1280, 720));
+    bgSprite.setTextureRect(sf::IntRect(0, 0, 960, 540));
     bgSprite.setPosition(0, 0);
+    bgSprite.setScale(4. / 3, 4. / 3);
 
     // Настройки для создания анимированного фона
     const int frameNum = 29;
