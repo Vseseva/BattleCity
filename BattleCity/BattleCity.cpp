@@ -14,6 +14,8 @@ Game::Game()
     sf::Image icon;
     icon.loadFromFile("images/icon.png");
     _window.setIcon(32, 32, icon.getPixelsPtr());
+    _window.setVerticalSyncEnabled(true);
+    _window.setFramerateLimit(60);
 }
 
 void Game::run()
