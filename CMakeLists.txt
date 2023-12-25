@@ -11,5 +11,5 @@ set(SFML_DIR "SFML/lib/cmake/SFML")
 
 find_package (SFML 2.6.1 REQUIRED system window graphics audio)
 
-add_executable (BattleCity "BattleCity/BattleCity.cpp" "BattleCity/main.cpp" "BattleCity/Button.cpp")
+add_executable (BattleCity "BattleCity/BattleCity.cpp" "BattleCity/main.cpp" "BattleCity/Button.cpp" "BattleCity/Block.h" "BattleCity/Block.cpp" "BattleCity/Tank.hpp" "BattleCity/Bullet.h" "BattleCity/Bonus.h")
 target_link_libraries(BattleCity sfml-graphics sfml-window sfml-audio sfml-system)
