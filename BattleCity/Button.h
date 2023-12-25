@@ -6,7 +6,7 @@
 class Button
 {
 public:
-	Button(int x, int y, int characterSize, std::string text, sf::Font* font);
+	Button(int x, int y, int characterSize, sf::String text, sf::Font* font);
 	bool isOnButton(float x, float y);
 	void setColor(sf::Color color);
 	operator sf::Text()

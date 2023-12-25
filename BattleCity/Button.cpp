@@ -1,7 +1,7 @@
 #include "Button.h"
 #include <iostream>
 
-Button::Button(int x, int y, int characterSize, std::string text, sf::Font* font)
+Button::Button(int x, int y, int characterSize, sf::String text, sf::Font* font)
 {
 	_posX = x;
 	_posY = y;
@@ -15,7 +15,9 @@ Button::Button(int x, int y, int characterSize, std::string text, sf::Font* font
 
 bool Button::isOnButton(float x, float y)
 {
-	return _posX <= x && x <= (_posX + _text.getLocalBounds().width) && _posY <= y && y <= (_posY + _text.getLocalBounds().height);
+	x += 7.5;
+	y -= 15;
+	return _posX <= x && x <= (_posX + _text.getLocalBounds().width) && _posY <= y && y <= (_posY + _text.getCharacterSize());
 }
 
 void Button::setColor(sf::Color color)
