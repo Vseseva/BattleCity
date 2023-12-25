@@ -6,6 +6,8 @@
 #include "Button.h"
 #include "Block.h"
 #include "Tank.hpp"
+#include "Bullet.h"
+#include "Bonus.h"
 
 class Game
 {
@@ -15,9 +17,9 @@ public:
 	void run();
 	int menu(sf::Sprite& bgSprite, const int frameNum, const float animationDuration, sf::Time& elapsedTime, sf::Clock& clock, sf::Sprite& cursor);
 	int options(sf::Sprite& cursor);
-	int start();
-	int levelStart(int level, int& score);
-	void statistics(int score);
+	int start(int players);
+	int levelStart(int level, int players, int& score, int& hp);
+	int statistics(int score);
 private:
 	int _width;
 	int _height;
