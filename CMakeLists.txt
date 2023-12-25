@@ -7,7 +7,7 @@ project ("BattleCity")
 
 set(SFML_STATIC_LIBRARIES TRUE)
 
-set(SFML_DIR "SFML/lib/cmake/SFML")
+set(SFML_DIR "SFML/SFML-2.6.1/lib/cmake/SFML")
 
 find_package (SFML 2.6.1 REQUIRED system window graphics audio)
 
