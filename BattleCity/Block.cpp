@@ -12,11 +12,12 @@ bool Block::isSolid()
 	return _isSolid;
 }
 
-bool Block::isOnBlock(float x, float y)
+sf::Vector2f Block::getPosition()
 {
-	if (!_isSolid)
-		return true;
-	sf::Vector2f pos = _sprite.getPosition();
-	sf::FloatRect bounds = _sprite.getLocalBounds();
-	return pos.x <= x && x <= (pos.x + bounds.width) && pos.y <= y && y <= (pos.y + bounds.height);
+	return _sprite.getPosition();
+}
+
+sf::FloatRect Block::getGlobalBounds()
+{
+	return _sprite.getGlobalBounds();
 }
