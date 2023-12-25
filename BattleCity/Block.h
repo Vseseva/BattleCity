@@ -10,7 +10,9 @@ public:
 		return _sprite;
 	}
 	bool isSolid();
-	bool isOnBlock(float x, float y);
+
+	sf::Vector2f getPosition();
+	sf::FloatRect getGlobalBounds();
 private:
 	bool _isSolid;
 	sf::Sprite _sprite;
